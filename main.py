@@ -127,9 +127,8 @@ def post_hatena(title: str, content: str) -> int:
         f"{content}\n\n"
         f"---\n"
         f"【楽天で検索】\n"
-        f"[{search_url}:title=楽天で検索]\n"
+        f"{search_url}\n"
     )
-
 
     # Atom XML must be escaped (otherwise &,<,> break the request)
     safe_title = xml_escape(clamp_title(title))
